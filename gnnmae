@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+char name[5] [5] = {"cat", "dog", "find", "tset", "khk"};
+int find_name(char *);
+int main()
+{
+    int i, result;
+    char b[5];
+    while(1)
+    {
+        printf("what?: ");
+        scanf("%s", &b);
+        result = find_name(b);
+        printf("%d\n", result+1);
+    }
+    return 0;
+}
+
+int find_name(char *find)
+{
+    int i, num=0;
+    for(i=0;i<5;i++)
+    {
+        if(strcmp(find, name[i])==0)
+            num = i;
+    }
+    return num;
+}    
